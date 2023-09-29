@@ -9,7 +9,9 @@ INDEX VERSION 1.134+C:\Users\rodri\Documents\R\prog\github\Trabalho-Disciplina-T
 3765109257.index
 3214867023.index
 39751935.index
+1546762351.index
 3886216291.index
+427760545.index
 3883530802.index
 3333102781.index
 1069468042.index
@@ -18,4 +20,6 @@ INDEX VERSION 1.134+C:\Users\rodri\Documents\R\prog\github\Trabalho-Disciplina-T
 488676387.index
 2199007318.index
 2472158970.index
+4283252771.index
 1865797976.index
+347235169.index

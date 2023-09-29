@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AcervoTest {
+class MulticondicaoTest {
 
 	@Test
-	void test() {
+	void testValidarLivros() {
 		fail("Not yet implemented");
 	}
 

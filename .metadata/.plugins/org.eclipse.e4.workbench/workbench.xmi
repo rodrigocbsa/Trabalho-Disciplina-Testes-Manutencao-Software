@@ -220,14 +220,8 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_B7NyoF5mEe6DkPe9LEBV3A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Acervo.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Acervo.java&quot; partName=&quot;Acervo.java&quot; title=&quot;Acervo.java&quot; tooltip=&quot;Biblioteca/src/negocio/Acervo.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Biblioteca/src/negocio/Acervo.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1913&quot; selectionTopPixel=&quot;1188&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
         <children xsi:type="basic:Part" xmi:id="_DvJ1cF5mEe6DkPe9LEBV3A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MulticondicaoTest.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MulticondicaoTest.java&quot; partName=&quot;MulticondicaoTest.java&quot; title=&quot;MulticondicaoTest.java&quot; tooltip=&quot;Biblioteca/test/negocio/MulticondicaoTest.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Biblioteca/test/negocio/MulticondicaoTest.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;211&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MulticondicaoTest.java&quot; partName=&quot;MulticondicaoTest.java&quot; title=&quot;MulticondicaoTest.java&quot; tooltip=&quot;Biblioteca/test/negocio/MulticondicaoTest.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Biblioteca/test/negocio/MulticondicaoTest.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;208&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -393,7 +387,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVpZ12VEe61Gv7DccgNnA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-B9CF15lEe6DkPe9LEBV3A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_SpYtRl2VEe61Gv7DccgNnA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gIosIF5pEe6sKI-lKiscJw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_SpYtRl2VEe61Gv7DccgNnA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVpdl2VEe61Gv7DccgNnA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -401,8 +395,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVpeF2VEe61Gv7DccgNnA" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-CGzEV5lEe6DkPe9LEBV3A" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_SpYGxV2VEe61Gv7DccgNnA"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-CGzEl5lEe6DkPe9LEBV3A" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_SpYHeV2VEe61Gv7DccgNnA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gIrvcF5pEe6sKI-lKiscJw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_SpYGxV2VEe61Gv7DccgNnA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gIs9kF5pEe6sKI-lKiscJw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_SpYHeV2VEe61Gv7DccgNnA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVpfF2VEe61Gv7DccgNnA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -432,7 +426,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVpz12VEe61Gv7DccgNnA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-CGzGF5lEe6DkPe9LEBV3A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_SpYs312VEe61Gv7DccgNnA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gItkoF5pEe6sKI-lKiscJw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_SpYs312VEe61Gv7DccgNnA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SpVp2l2VEe61Gv7DccgNnA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -7,8 +7,14 @@ import org.junit.jupiter.api.Test;
 class MulticondicaoTest {
 
 	@Test
-	void testValidarLivros() {
+	void condicional1_1() {
 		fail("Not yet implemented");
 	}
 
+	@Test
+	void condicional1_2() {
+		fail("Not yet implemented");
+	}
+	
+	//...
 }

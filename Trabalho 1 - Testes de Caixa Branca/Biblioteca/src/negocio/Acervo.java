@@ -29,10 +29,10 @@ public class Acervo {
             if (quantidadeAtual >= quantidade) {
                 livros.put(livro, quantidadeAtual - quantidade);
             } else {
-                throw new IllegalArgumentException("Quantidade a remover é maior que a quantidade atual em estoque");
+                throw new IllegalArgumentException("Quantidade a remover ï¿½ maior que a quantidade atual em estoque");
             }
         } else {
-            throw new IllegalArgumentException("Livro não encontrado na Acervo");
+            throw new IllegalArgumentException("Livro nï¿½o encontrado na Acervo");
         }
     }
 
@@ -49,12 +49,12 @@ public class Acervo {
             int quantidadeAtual = livros.get(livro);
             int novaQuantidade = quantidadeAtual + quantidade;
             if (novaQuantidade < 0) {
-                throw new IllegalArgumentException("Quantidade a remover é maior que a quantidade atual em estoque");
+                throw new IllegalArgumentException("Quantidade a remover ï¿½ maior que a quantidade atual em estoque");
             } else {
                 livros.put(livro, novaQuantidade);
             }
         } else {
-            throw new IllegalArgumentException("Livro não encontrado na Acervo");
+            throw new IllegalArgumentException("Livro nï¿½o encontrado na Acervo");
         }
     }
 
@@ -75,7 +75,7 @@ public class Acervo {
             }
             if (livro.getAnoPublicacao() <= 0) {
                 valido = false;
-            }
+            } 
             if (livro.getQuantidadePaginas() <= 0) {
                 valido = false;
             }

@@ -101,7 +101,7 @@ public class TodosOsNosTest {
 	// Teste para empréstimo autorizado e bem-sucedido
     @Test
     public void realizarEmprestimo_todosOsNos_caminho5() throws Exception {
-    	// Preparação dos Dados
+    	// Preparação dos Dados 
         Cliente cliente = new Cliente("João"); // Cria um objeto real Cliente
         
         List<Livro> livros = new ArrayList<>();

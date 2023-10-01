@@ -101,9 +101,9 @@ public class Livro {
     public int calcularNumeroDiasEmprestimo(Cliente cliente, Date dataAtual) throws EmprestimoNaoAutorizadoException {
     	int numeroDias = numeroDiasEmprestimo;
         if (ehLancamento(dataAtual)) {
-            numeroDias = numeroDias/2;
+            numeroDias = numeroDias/2; 
         } else {
-            // Se não for um lançamento, verificar outras condições 
+            // Se nï¿½o for um lanï¿½amento, verificar outras condiï¿½ï¿½es 
             if (quantidadeExemplaresNoAcervo() > 1) {
             	numeroDias = numeroDias + numeroDias/2;
             }
@@ -122,7 +122,7 @@ public class Livro {
             }
 
             if (cliente.getTipo() == TipoCliente.FUNCIONARIO_BIBLIOTECA) {
-                // Se o cliente for funcionário da biblioteca, adicionar dias ao prazo
+                // Se o cliente for funcionï¿½rio da biblioteca, adicionar dias ao prazo
             	numeroDias += numeroDias;
             }
         }
@@ -133,7 +133,7 @@ public class Livro {
     public boolean ehLancamento(Date dataAtual) {
     	boolean lancamento = false;
         if (dataLancamento == null) {
-            throw new DadosNaoDefinidosException("Data de lançamento não definida.");
+            throw new DadosNaoDefinidosException("Data de lanï¿½amento nï¿½o definida.");
         }
         
         long trintaDiasAtras = dataAtual.getTime() - (30L * 24L * 60L * 60L * 1000L);

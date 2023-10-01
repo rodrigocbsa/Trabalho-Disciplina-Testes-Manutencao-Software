@@ -56,8 +56,27 @@ public class EmprestimoService {
 	
 	
 	public void renovarEmprestimo(Emprestimo emprestimo, int diasAdicionais) {
-        // Implemente a lógica para renovar o empréstimo
-        // O prazo de devolução deve ser estendido em "diasAdicionais" dias
-    }
+        // Implemente a lï¿½gica para renovar o emprï¿½stimo
+        // O prazo de devoluï¿½ï¿½o deve ser estendido em "diasAdicionais" dias
+		//Instancia a Data dentro de Emprestimo
+		Date dataDevolucao = emprestimo.getDataDevolucao();
+		Date dataEmprestimo = emprestimo.getDataEmprestimo();
+		
+		Date Atraso = Calendar.getInstance().getTime();
+		
+		if((diasAdicionais > 0) && (dataDevolucao != null && dataEmprestimo.compareTo(dataDevolucao)< 0) && dataDevolucao.compareTo(Atraso) >= 0) {
+			if(emprestimo.getRenovacoesDisponiveis()> 0 || emprestimo.getCliente().getTipo() == TipoCliente.FUNCIONARIO_BIBLIOTECA) {
+			emprestimo.setDataDevolucao(DataUtils.adicionarDias(dataDevolucao, diasAdicionais));
+			emprestimo.setRenovacoesDisponiveis(emprestimo.getRenovacoesDisponiveis()-1);
+			}else
+				throw new DadosNaoDefinidosException("Sem RenovaÃ§Ãµes disponiveis");	
+		}
+		
+		else if(dataDevolucao == null || dataEmprestimo.compareTo(dataDevolucao)> 0 || diasAdicionais <= 0) {
+			throw new DadosNaoDefinidosException("Dados nÃ£o definidos ou invalidos");
+		} else if(dataDevolucao.compareTo(Atraso) < 0) {
+			emprestimo.getCliente().registrarAtraso();
+			throw new DadosNaoDefinidosException("Emprestimo em Atraso, nÃ£o Ã© permitido renovar emprestimo");
+		}
+	}
 }
-

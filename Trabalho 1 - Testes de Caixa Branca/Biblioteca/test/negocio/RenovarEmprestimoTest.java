@@ -129,4 +129,44 @@ public class RenovarEmprestimoTest {
 			assertEquals(e.getMessage(),"Sem Renovações disponiveis");
 		}
 	}
+	@Test
+	public void renovarEmprestimo_quandoRecebeUmClienteFuncionarioEmEmprestimoSemrenovacao_retornaValoresAtribuidos() {
+		//Preparação
+		Emprestimo emprestimo = new Emprestimo();
+		Cliente cliente = new Cliente(2, "Carolina", "carolina@cefet-rj.br", "2222226555", TipoCliente.FUNCIONARIO_BIBLIOTECA);
+		emprestimo.setCliente(cliente);
+		emprestimo.setRenovacoesDisponiveis(0);
+		Date datadev = new GregorianCalendar(2023,Calendar.OCTOBER,20).getTime();
+		Date dataemp = new GregorianCalendar(2023,Calendar.OCTOBER,10).getTime();
+		emprestimo.setDataDevolucao(datadev);
+		emprestimo.setDataEmprestimo(dataemp);
+		int dias = 10;
+		
+		//Roteiro
+		service.renovarEmprestimo(emprestimo, dias);
+		
+		//resultado
+		Date resultado = new GregorianCalendar(2023,Calendar.OCTOBER,30).getTime();
+		assertEquals(resultado,emprestimo.getDataDevolucao());
+	}
+	@Test
+	public void renovarEmprestimo_quandoRecebeUmClientePremiumEmEmprestimoSemrenovacao_retornaMensagem() {
+		//Preparação
+		Emprestimo emprestimo = new Emprestimo();
+		Cliente cliente = new Cliente(2, "Carolina", "carolina@cefet-rj.br", "2222226555", TipoCliente.PREMIUM);
+		emprestimo.setCliente(cliente);
+		emprestimo.setRenovacoesDisponiveis(0);
+		Date datadev = new GregorianCalendar(2023,Calendar.OCTOBER,20).getTime();
+		Date dataemp = new GregorianCalendar(2023,Calendar.OCTOBER,10).getTime();
+		emprestimo.setDataDevolucao(datadev);
+		emprestimo.setDataEmprestimo(dataemp);
+		int dias = 10;
+		
+		try {
+			service.renovarEmprestimo(emprestimo, dias);
+			Assert.fail();
+		}catch(DadosNaoDefinidosException e) {
+			assertEquals(e.getMessage(),"Sem Renovações disponiveis");
+		}
+	}
 }

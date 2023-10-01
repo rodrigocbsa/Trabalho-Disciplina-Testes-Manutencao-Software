@@ -1,8 +1,6 @@
 package negocio;
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;

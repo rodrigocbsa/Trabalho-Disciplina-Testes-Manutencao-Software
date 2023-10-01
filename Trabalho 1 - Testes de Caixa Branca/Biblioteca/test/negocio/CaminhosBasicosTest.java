@@ -5,17 +5,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Date;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-class CaminhosBasicosTest {
+public class CaminhosBasicosTest {
 
 	//Caminho 1: I,1,2,12,O
 	//data de lançamento do livro tem menos que 30 dias
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho1() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho1() throws Exception{
 		//Preparação dos Dados
 		Cliente cliente = new Cliente("João");
 		// Configurando a data de lançamento do livro com mais de 30 dias atrás
@@ -29,7 +29,7 @@ class CaminhosBasicosTest {
 	//Caminho 2: i,1,3,5,8,10,12,o
 	//data de lançamento do livro tem mais de 30 dias
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho2() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho2() throws Exception{
 		// Preparação dos Dados
         Cliente cliente = new Cliente("João");
         // Configurando a data de lançamento do livro com mais de 30 dias atrás
@@ -46,7 +46,7 @@ class CaminhosBasicosTest {
 	//Caminho 3: i,1,3,5,8,10,11,o
 	// cliente é FUNCIONARIO da BIBLIOTECA
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho3() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho3() throws Exception{
 		// Preparação dos Dados
 	    Cliente cliente = new Cliente(0, "João", "email@email.com", "(00)0000-0000", TipoCliente.FUNCIONARIO_BIBLIOTECA);
 	    
@@ -64,7 +64,7 @@ class CaminhosBasicosTest {
 	//Caminho 4: i,1,3,4,5,8,10,12,o
 	// quantidadeExemplaresNoAcervo maior que um
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho4() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho4() throws Exception{
 		// Preparação dos Dados
 	    Cliente cliente = new Cliente("João");
 	    
@@ -83,7 +83,7 @@ class CaminhosBasicosTest {
 	//Caminho 5: i,1,3,4,5,6,7,8,10,12,o
 	// cliente 1 tem atraso
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho5() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho5() throws Exception{
 		// Preparação dos Dados
 	    Cliente cliente = new Cliente("João");
 	    cliente.registrarAtraso();
@@ -103,7 +103,7 @@ class CaminhosBasicosTest {
 	//Caminho 7: i,1,3,4,5,6,7,8,10,12,o
 	// cliente mais 1 tem atraso e é PREMIUM
 	@Test
-	void calcularNumeroDiasEmprestimo_caminhosBasico_caminho7() throws Exception{
+	public void calcularNumeroDiasEmprestimo_caminhosBasico_caminho7() throws Exception{
 		// Preparação dos Dados
 	    Cliente cliente = new Cliente(0, "João", "email@email.com", "(00)0000-0000", TipoCliente.PREMIUM);
 	    cliente.registrarAtraso();

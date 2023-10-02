@@ -8,12 +8,11 @@ import org.junit.Test;
 public class ClientTest {
 	
 	public static Cliente cliente;
-	public static TipoCliente tipo;
 	
 	@BeforeClass
 	public static void setUp() {
-		cliente = new Cliente(1,"Celso","celso@cefet-rj.br","",tipo.PADRAO);
-	}
+		cliente = new Cliente(1,"Celso","celso@cefet-rj.br","",TipoCliente.PADRAO);
+	} 
 
 	@Test
 	public void validarTelefone_quandorecebe2220203040_retornaTrue() {

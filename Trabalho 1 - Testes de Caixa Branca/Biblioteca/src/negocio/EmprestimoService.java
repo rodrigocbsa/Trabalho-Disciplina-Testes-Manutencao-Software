@@ -10,7 +10,7 @@ import excecoes.EmprestimoNaoAutorizadoException;
 import excecoes.LivroIndisponivelException;
 import persistencia.EmprestimoDAO;
 
-public class EmprestimoService {
+public class EmprestimoService { 
 	
 	private Acervo acervo;
 	private EmprestimoDAO emprestimoDAO;

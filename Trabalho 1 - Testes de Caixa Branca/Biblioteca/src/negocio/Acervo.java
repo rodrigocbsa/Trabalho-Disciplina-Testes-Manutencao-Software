@@ -57,7 +57,7 @@ public class Acervo {
             throw new IllegalArgumentException("Livro n�o encontrado na Acervo");
         }
     }
-
+ 
     public List<Livro> validarLivros() {
         List<Livro> livros = livroDAO.encontrarTodosOsLivros();
         List<Livro> invalidos = new ArrayList<>();

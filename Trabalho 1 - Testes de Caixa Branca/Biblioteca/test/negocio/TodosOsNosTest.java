@@ -1,6 +1,5 @@
 package negocio;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -43,7 +42,7 @@ public class TodosOsNosTest {
 	public void realizarEmprestimo_todosOsNos_caminho1() throws Exception{
 		//Preparação dos Dados
 		Cliente cliente = null;
-		List<Livro> livro = null;
+		List<Livro> livro = new ArrayList();
 		//Roteiro
 		service.realizarEmprestimo(cliente, livro);
 		//Verificação
@@ -69,10 +68,17 @@ public class TodosOsNosTest {
 		Cliente cliente = new Cliente("Ana");
 		List<Livro> livros = new ArrayList<Livro>();
 		Date data = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2023");
+		
 		Livro livro1 = new Livro(1, "O Mundo de Sofia", "autor", "filosofia", 2012, 510, acervo, data);
+		acervo.adicionarLivro(livro1, 1);
+		Livro livro2 = new Livro(2, "O Mundo de Sofia 2", "autor", "filosofia", 2012, 510, acervo, data);
+		acervo.adicionarLivro(livro1, 1);
+		acervo.adicionarLivro(livro2, 0);
+		
 		livros.add(livro1);
+		livros.add(livro2);
 		//Roteiro
-		service.realizarEmprestimo(cliente, livros);
+		service.realizarEmprestimo(cliente, livros); 
 		//Verificação
 		//lançamento de exeção
 	}

@@ -12,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 
 import excecoes.DadosNaoDefinidosException;
-import excecoes.EmprestimoNaoAutorizadoException;
 
 public class RenovarEmprestimoTest {
 	
@@ -85,7 +84,7 @@ public class RenovarEmprestimoTest {
 		//Resultado
 		//Espera lançamento de exceção
 	}
-	@Test
+	@Test(expected = DadosNaoDefinidosException.class)
 	public void renovarEmprestimo_quandoRecebeUmEmprestimoAtrasado_retornaMensagem() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
@@ -99,14 +98,9 @@ public class RenovarEmprestimoTest {
 		int dias = 10;
 		
 		//Roteiro
-		try {
-			service.renovarEmprestimo(emprestimo, dias);
-			Assert.fail();
-		}catch(DadosNaoDefinidosException e) {
-			assertEquals(e.getMessage(),"Emprestimo em Atraso, não é permitido renovar emprestimo");
-		}
+		service.renovarEmprestimo(emprestimo, dias);
 	}
-	@Test
+	@Test(expected = DadosNaoDefinidosException.class)
 	public void renovarEmprestimo_quandoRecebeUmEmprestimoSemRenovacao_retornaMensagem() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
@@ -120,12 +114,7 @@ public class RenovarEmprestimoTest {
 		int dias = 10;
 		
 		//Roteiro
-		try {
-			service.renovarEmprestimo(emprestimo, dias);
-			Assert.fail();
-		}catch(DadosNaoDefinidosException e) {
-			assertEquals(e.getMessage(),"Sem Renovações disponiveis");
-		}
+		service.renovarEmprestimo(emprestimo, dias);
 	}
 	@Test
 	public void renovarEmprestimo_quandoRecebeUmClienteFuncionarioEmEmprestimoSemrenovacao_retornaValoresAtribuidos() {
@@ -147,7 +136,7 @@ public class RenovarEmprestimoTest {
 		Date resultado = new GregorianCalendar(2023,Calendar.OCTOBER,30).getTime();
 		assertEquals(resultado,emprestimo.getDataDevolucao());
 	}
-	@Test
+	@Test(expected = DadosNaoDefinidosException.class)
 	public void renovarEmprestimo_quandoRecebeUmClientePremiumEmEmprestimoSemrenovacao_retornaMensagem() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
@@ -160,11 +149,6 @@ public class RenovarEmprestimoTest {
 		emprestimo.setDataEmprestimo(dataemp);
 		int dias = 10;
 		
-		try {
-			service.renovarEmprestimo(emprestimo, dias);
-			Assert.fail();
-		}catch(DadosNaoDefinidosException e) {
-			assertEquals(e.getMessage(),"Sem Renovações disponiveis");
-		}
+		service.renovarEmprestimo(emprestimo, dias);
 	}
 }

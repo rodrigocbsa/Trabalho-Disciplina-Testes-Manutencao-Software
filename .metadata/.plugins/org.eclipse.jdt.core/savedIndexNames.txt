@@ -7,5 +7,4 @@ INDEX VERSION 1.134+C:\Users\rodri\Documents\R\prog\github\Trabalho-Disciplina-T
 418502913.index
 4283252771.index
 2199007318.index
-1204385438.index
 1546762351.index

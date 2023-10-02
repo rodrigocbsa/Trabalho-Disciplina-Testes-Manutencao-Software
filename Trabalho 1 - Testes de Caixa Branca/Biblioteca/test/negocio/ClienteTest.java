@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ClientTest {
+public class ClienteTest {
 	
 	public static Cliente cliente;
 	public static TipoCliente tipo;

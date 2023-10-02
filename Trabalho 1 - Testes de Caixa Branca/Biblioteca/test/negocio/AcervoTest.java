@@ -78,5 +78,16 @@ public class AcervoTest {
 		//Validação
 		//lançamento de exeção
 	}
+	
+	@Test
+	public void adicionarLivro_quandoReceberLivroExistente_deveAtualizarQuantidade() {
+		// Preparação dos Dados
+		acervo.adicionarLivro(livro, 2);
+		
+		//Roteiro
+		acervo.adicionarLivro(livro, 3);
+		//Validação
+		assertEquals(5, acervo.obterQuantidadeEmEstoque(livro));
+	}
 
 }

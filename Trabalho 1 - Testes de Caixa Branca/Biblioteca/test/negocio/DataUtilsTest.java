@@ -6,17 +6,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class DataUtilsTest {
 	
-	public static DataUtils dataUtil;
 	
-	@BeforeClass
-	public static void setUp() {
-		dataUtil = new DataUtils();
-	}
 	@Test
 	public void adicionarDias_quandoRecebe28DeSetembro2023e5_retorna02Outubro2023() {
 		//Prepara��o dos dados
@@ -26,7 +20,7 @@ public class DataUtilsTest {
 		Calendar esperado = new GregorianCalendar(2023,Calendar.OCTOBER,3);
 		
 		//Roteiro
-		Date resultado = dataUtil.adicionarDias(data, qtdDias);
+		Date resultado = DataUtils.adicionarDias(data, qtdDias); 
 		
 		//Resultado
 		assertEquals(esperado.getTime(), resultado);
@@ -39,7 +33,7 @@ public class DataUtilsTest {
 		int diaSemana = 2; //segunda
 		Boolean esperado = true;
 		//Roteiro
-		Boolean resultado = dataUtil.verificarDiaSemana(data, diaSemana);
+		Boolean resultado = DataUtils.verificarDiaSemana(data, diaSemana);
 		
 		//Resultado
 		assertEquals(esperado, resultado);
@@ -52,7 +46,7 @@ public class DataUtilsTest {
 		int diaSemana = 1; //Domingo
 		Boolean esperado = false;
 		//Roteiro
-		Boolean resultado = dataUtil.verificarDiaSemana(data, diaSemana);
+		Boolean resultado = DataUtils.verificarDiaSemana(data, diaSemana);
 		
 		//Resultado
 		assertEquals(esperado, resultado);
@@ -64,7 +58,7 @@ public class DataUtilsTest {
 		dataPreFormatada.add(Calendar.DAY_OF_MONTH,10);
 		Date dataEsperada = dataPreFormatada.getTime();
 		//Roteiro
-		Date resultado = dataUtil.obterDataComDiferencaDias(10); 
+		Date resultado = DataUtils.obterDataComDiferencaDias(10); 
 		//Resultado
 		assertEquals(dataEsperada, resultado);
 	}

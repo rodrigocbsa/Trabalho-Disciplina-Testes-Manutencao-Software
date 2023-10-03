@@ -20,7 +20,7 @@ public class RenovarEmprestimoTest {
 	
 	@Before
 	public void setUp() {
-		MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.initMocks(this); 
 	}
 	@Test
 	public void renovarEmprestimo_quandoRecebeUmEmprestimoDia25DeOutubroe5_retorna30deOutubro() {
@@ -45,7 +45,7 @@ public class RenovarEmprestimoTest {
 	}
 	
 	@Test(expected=DadosNaoDefinidosException.class)
-	public void renovarEmprestimo_quandoRecebeUmEmprestimoeMenos2_RetornaErro() throws DadosNaoDefinidosException {
+	public void renovarEmprestimo_quandoRecebeUmEmprestimoeMenos2_RetornaErro(){
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
 		Cliente cliente = new Cliente(1, "Ana", "ana@cefet-rj.br", "2222226555", TipoCliente.PADRAO);
@@ -65,7 +65,7 @@ public class RenovarEmprestimoTest {
 		//Espera lançamento de exceção
 	}
 	@Test(expected=DadosNaoDefinidosException.class)
-	public void renovarEmprestimo_quandoRecebeUmEmprestimoComDataNulae1_RetornaErro() throws DadosNaoDefinidosException {
+	public void renovarEmprestimo_quandoRecebeUmEmprestimoComDataNulae1_lancaDadosNaoDefinidosException(){
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
 		Cliente cliente = new Cliente(1, "Ana", "ana@cefet-rj.br", "2222226555", TipoCliente.PADRAO);
@@ -85,7 +85,7 @@ public class RenovarEmprestimoTest {
 		//Espera lançamento de exceção
 	}
 	@Test(expected = DadosNaoDefinidosException.class)
-	public void renovarEmprestimo_quandoRecebeUmEmprestimoAtrasado_retornaMensagem() {
+	public void renovarEmprestimo_quandoRecebeUmEmprestimoAtrasado_lancaDadosNaoDefinidosException() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
 		Cliente cliente = new Cliente(1, "Ana", "ana@cefet-rj.br", "2222226555", TipoCliente.PADRAO);
@@ -101,7 +101,7 @@ public class RenovarEmprestimoTest {
 		service.renovarEmprestimo(emprestimo, dias);
 	}
 	@Test(expected = DadosNaoDefinidosException.class)
-	public void renovarEmprestimo_quandoRecebeUmEmprestimoSemRenovacao_retornaMensagem() {
+	public void renovarEmprestimo_quandoRecebeUmEmprestimoSemRenovacao_lancaDadosNaoDefinidosException() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
 		Cliente cliente = new Cliente(1, "Ana", "ana@cefet-rj.br", "2222226555", TipoCliente.PADRAO);
@@ -137,7 +137,7 @@ public class RenovarEmprestimoTest {
 		assertEquals(resultado,emprestimo.getDataDevolucao());
 	}
 	@Test(expected = DadosNaoDefinidosException.class)
-	public void renovarEmprestimo_quandoRecebeUmClientePremiumEmEmprestimoSemrenovacao_retornaMensagem() {
+	public void renovarEmprestimo_quandoRecebeUmClientePremiumEmEmprestimoSemrenovacao_lancaDadosNaoDefinidosException() {
 		//Preparação
 		Emprestimo emprestimo = new Emprestimo();
 		Cliente cliente = new Cliente(2, "Carolina", "carolina@cefet-rj.br", "2222226555", TipoCliente.PREMIUM);

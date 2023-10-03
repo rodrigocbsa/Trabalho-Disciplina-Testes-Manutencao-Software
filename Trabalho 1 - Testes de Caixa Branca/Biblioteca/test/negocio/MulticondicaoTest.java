@@ -30,7 +30,7 @@ public class MulticondicaoTest {
 	
 	//Todas as condições são verdadeiras
 	@Test
-	public void validarLivros_condicional1_caminho1() {
+	public void validarLivros_todasAsInformacoesSaoInvalidas() {
     	// Preparação dos Dados
 		List<Livro> livros = new ArrayList<Livro>();
 		Livro livro1 = new Livro(0, null, null, null, 0, 0, null, null);
@@ -44,7 +44,7 @@ public class MulticondicaoTest {
 	
 	//Todas as condições 3 primeiras verdadeiras e 4 ultimas falsas
 	@Test
-	public void validarLivros_condicional1_caminho2() {
+	public void validarLivros_as3PrimeirasInformacoesSaoInvalidas() {
 	   	// Preparação dos Dados
 		List<Livro> livros = new ArrayList<Livro>();
 		Livro livro2 = new Livro(0, "", "", "", 2012, 100, acervo, new Date());
@@ -58,7 +58,7 @@ public class MulticondicaoTest {
 		
 	//Todas as condições falsas
 	@Test
-	public void validarLivros_condicional1_caminho3() {
+	public void validarLivros_todasAsInformacoesSaoValidas() {
 		// Preparação dos Dados
 		List<Livro> livros = new ArrayList<Livro>();
 		Livro livro2 = new Livro(1, "Livro", "Autor", "Descricao", 2012, 100, acervo, new Date());
